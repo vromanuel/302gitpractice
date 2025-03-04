@@ -1,4 +1,3 @@
-package w2_task;
 public class User {
     private String username;
     private String password;
