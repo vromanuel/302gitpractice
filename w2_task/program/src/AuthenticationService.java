@@ -15,10 +15,8 @@ public class AuthenticationService implements IAuthenticationService
 
     public User signUp(String username, String password)
     {
-        for(int i = 0; i<this.users.size(); i++)
-        {
-            if(username.equals(users.get(i).username))
-            {
+        for (User user : this.users) {
+            if (username.equals(user.username)) {
                 return null;
             }
         }
@@ -27,6 +25,19 @@ public class AuthenticationService implements IAuthenticationService
         this.users.add(newUser);
         return newUser;
 
+    }
+
+    public User logIn(String username, String password)
+    {
+        for (User user: this.users) {
+            if (username.equals(user.getUsername())) {
+             if(password.equals(user.getPassword()))
+             {
+                 return user;
+             }
+            }
+        }
+        return null;
     }
 
 
