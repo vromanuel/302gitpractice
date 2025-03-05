@@ -16,7 +16,7 @@ public class AuthenticationService implements IAuthenticationService
     public User signUp(String username, String password)
     {
         for (User user : this.users) {
-            if (username.equals(user.username)) {
+            if (username.equals(user.getUsername())) {
                 return null;
             }
         }
