@@ -1,3 +1,5 @@
+package w2_task.program.src;
+
 public class User {
     private String username;
     private String password;
